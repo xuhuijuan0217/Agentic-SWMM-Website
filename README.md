@@ -1,41 +1,109 @@
-# Open Source Website Template
+# Agentic SWMM Website Template
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+A free open-source website template for academic and open-source software projects.
 
-## Template Highlights
-- **Core CSS Ready:** A polished, modern, and production-ready CSS with a beautiful light theme, responsive grid layouts, and smooth animations.
-- **6-Page Architecture:** Comes out of the box with the perfect structure for software/academic projects (Home, Vision, Features, Validation, Download, Contact).
-- **SEO & Social Ready:** Pre-configured Open Graph (OG) meta tags so your links look amazing on LinkedIn, Twitter, and other social media platforms.
+This repository hosts the official website for Agentic SWMM Workflow, a verification-first framework for reproducible stormwater modeling with EPA SWMM. It also works as a reusable project website template that others can copy, customize, and deploy quickly, ideally within one hour.
 
-## The Story Behind This Project
-This template originated from my personal academic homepage, zhonghaoz.ca. When I needed a professional project documentation website for my new open-source project, Agentic SWMM Workflow, I used Gemini 3.1 Pro (High) to extract, generalize, and rebuild the core layout into a reusable template in just 20 minutes.
+Live website: https://aiswmm.com  
+Main project: https://github.com/Zhonghao1995/agentic-swmm-workflow
 
-To help other researchers and developers save time, I am fully open-sourcing this template under the MIT License. 
-
-(Note: If you need a domain name, I highly recommend using Namecheap for quick and affordable DNS management.)
-
-## Website Previews
 ![Preview 1](assets/preview1.png)
 ![Preview 2](assets/preview2.png)
 
-## About Agentic SWMM
-If you are interested in hydrological models and agentic AI, you can visit my repository [agentic-swmm-workflow](https://github.com/Zhonghao1995/agentic-swmm-workflow) and read my related paper [here](https://eartharxiv.org/repository/view/12219/).
+## Why this template exists
 
-This repository contains the source code for the Agentic SWMM Workflow project website, as well as a reusable AI Skill to help others generate their own academic or open-source websites.
+Many research projects and open-source tools have useful code, but their websites are often hard to build, hard to maintain, or not clear enough for new users.
 
-**Live Website:** [https://aiswmm.com](https://aiswmm.com)
+This template gives you a clean project website structure that you can reuse for your own work. It is especially useful if you want to present a software project, academic workflow, model, dataset, paper, or research tool in a more professional way.
 
-## Reusable AI Skill (Project Website Builder)
-The `project-website-builder` folder contains an AI Skill that allows LLMs to automatically generate a custom website for you based on this layout.
+## What you get
 
-To use the skill:
+- A ready-to-edit multi-page website.
+- A clean home page for explaining your project.
+- Pages for vision, features, validation, download, and contact.
+- Responsive HTML and CSS that works on desktop and mobile.
+- SEO and social sharing metadata for LinkedIn, Twitter, and other platforms.
+- A reusable Agent Skill that can help an AI assistant generate a similar website for your own project.
+- MIT License, so you can use it freely, including for academic, open-source, and commercial projects.
+
+## Who this is for
+
+This template is useful for:
+
+- Researchers who want a simple project website.
+- PhD students who want to present a paper, model, or software tool.
+- Open-source developers who want a clean website without building everything from zero.
+- Hydrology, environmental modeling, and engineering projects that need a clear public-facing page.
+- Anyone who wants to deploy a project website quickly.
+
+## Quick start
+
+You can use this repository in two ways.
+
+### Option 1: Use it as a normal website template
+
+1. Fork or download this repository.
+2. Edit the HTML files such as:
+   - `index.html`
+   - `vision.html`
+   - `features.html`
+   - `validation.html`
+   - `download.html`
+   - `contact.html`
+3. Update `styles.css` if you want to change the design.
+4. Deploy it with GitHub Pages, Netlify, Vercel, or your own server.
+
+### Option 2: Use the included Agent Skill
+
+The folder `project-website-builder` contains a reusable Agent Skill.
+
+You can give this folder to an AI coding assistant such as Gemini, Claude, ChatGPT, or Codex-style agents. The AI can read the `SKILL.md` file and use the template files to generate a customized website for your own project.
+
+**Basic workflow:**
+
 1. Download the `project-website-builder` folder.
-2. Upload or provide this folder to Gemini 3 (or Claude) as a reference.
-3. The AI will read the `SKILL.md` instructions and use the `assets/template/` files to instantly generate your personalized 6-page responsive website.
+2. Give it to your AI assistant together with your project information.
+3. Ask the assistant to generate a project website based on the template.
+4. Review the generated pages and deploy them.
 
-## Directory Structure
-- `index.html`, `vision.html`, `styles.css`, etc. - The live Agentic SWMM website source code.
-- `project-website-builder/` - The generic AI Skill and template folder for generating new websites.
+## Website structure
+
+The template includes six main pages:
+
+- **Home**: project summary, key message, and call-to-action buttons.
+- **Vision**: why the project matters and what problem it solves.
+- **Features**: main functions and workflow highlights.
+- **Validation**: evidence, benchmarks, case studies, or audit records.
+- **Download**: installation guide, Docker commands, and repository links.
+- **Contact**: author information, collaboration links, and citation details.
+
+## About Agentic SWMM Workflow
+
+Agentic SWMM Workflow is an open-source framework for reproducible stormwater modeling with EPA SWMM.
+
+It focuses on model execution, QA checks, provenance tracking, audit notes, calibration support, documentation, and modeling memory, while keeping human modelers in control.
+
+- The official website built from this template is available here:  
+  https://aiswmm.com
+- The main Agentic SWMM Workflow repository is available here:  
+  https://github.com/Zhonghao1995/agentic-swmm-workflow
+
+## Reuse this template
+
+You are welcome to reuse this template for your own project.
+
+You can:
+
+- Use it as your project website.
+- Modify the design.
+- Replace the content with your own project information.
+- Use the Agent Skill to generate a customized version.
+- Deploy it as a public website.
+
+A simple website can usually be customized and deployed within about one hour, depending on how much content you want to change.
 
 ## License
-This project is licensed under the MIT License. You are free to use it for any purpose, including commercial projects.
+
+This project is released under the MIT License.
+
+You are free to use, modify, and distribute it.
