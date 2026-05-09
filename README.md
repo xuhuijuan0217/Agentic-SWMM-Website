@@ -2,7 +2,7 @@
 
 A free open-source website template for academic and open-source software projects.
 
-This repository hosts the official website for Agentic SWMM Workflow (https://github.com/Zhonghao1995/agentic-swmm-workflow), a verification-first framework for reproducible stormwater modeling with EPA SWMM. It also works as a reusable project website template that others can copy, customize, and deploy quickly, ideally within one hour.
+This repository hosts the official website for [Agentic SWMM Workflow](https://github.com/Zhonghao1995/agentic-swmm-workflow), a verification-first framework for reproducible stormwater modeling with EPA SWMM. It also works as a reusable project website template that others can copy, customize, and deploy quickly, ideally within one hour.
 
 Live website: https://aiswmm.com  
 
@@ -76,16 +76,6 @@ The template includes six main pages:
 - **Download**: installation guide, Docker commands, and repository links.
 - **Contact**: author information, collaboration links, and citation details.
 
-## About Agentic SWMM Workflow
-
-Agentic SWMM Workflow is an open-source framework for reproducible stormwater modeling with EPA SWMM.
-
-It focuses on model execution, QA checks, provenance tracking, audit notes, calibration support, documentation, and modeling memory, while keeping human modelers in control.
-
-- The official website built from this template is available here:  
-  https://aiswmm.com
-- The main Agentic SWMM Workflow repository is available here:  
-  https://github.com/Zhonghao1995/agentic-swmm-workflow
 
 ## Reuse this template
 
