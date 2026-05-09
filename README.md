@@ -2,10 +2,9 @@
 
 A free open-source website template for academic and open-source software projects.
 
-This repository hosts the official website for Agentic SWMM Workflow, a verification-first framework for reproducible stormwater modeling with EPA SWMM. It also works as a reusable project website template that others can copy, customize, and deploy quickly, ideally within one hour.
+This repository hosts the official website for Agentic SWMM Workflow (https://github.com/Zhonghao1995/agentic-swmm-workflow), a verification-first framework for reproducible stormwater modeling with EPA SWMM. It also works as a reusable project website template that others can copy, customize, and deploy quickly, ideally within one hour.
 
 Live website: https://aiswmm.com  
-Main project: https://github.com/Zhonghao1995/agentic-swmm-workflow
 
 ![Preview 1](assets/preview1.png)
 ![Preview 2](assets/preview2.png)
@@ -100,10 +99,10 @@ You can:
 - Use the Agent Skill to generate a customized version.
 - Deploy it as a public website.
 
-A simple website can usually be customized and deployed within about one hour, depending on how much content you want to change.
+A simple website can usually be customized and deployed within about one hour, depending on how much content you want to change.   :D
 
 ## License
 
 This project is released under the MIT License.
 
-You are free to use, modify, and distribute it.
+You are free to use, modify, and distribute it.  :)
