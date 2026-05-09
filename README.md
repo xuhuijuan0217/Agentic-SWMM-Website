@@ -116,32 +116,6 @@ When adapting this template for your own project, update:
 - Validation claims and evidence boundaries.
 - `CNAME` if using a custom domain with GitHub Pages.
 
-## Suggested GitHub About and topics
-
-Suggested repository description:
-
-```text
-Official website for Agentic SWMM Workflow: a verification-first EPA SWMM framework for reproducible stormwater modeling, plus a reusable academic website template.
-```
-
-Suggested topics:
-
-```text
-agentic-swmm
-epa-swmm
-swmm
-stormwater
-hydrology
-urban-drainage
-reproducible-research
-research-software
-agentic-ai
-llm-agents
-academic-website
-website-template
-github-pages
-open-source
-```
 
 ## License
 
