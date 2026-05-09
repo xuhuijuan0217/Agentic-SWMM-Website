@@ -1,4 +1,21 @@
 (function(){
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function(){
+      const isOpen = navMenu.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navMenu.addEventListener('click', function(event){
+      if (event.target.closest('a')) {
+        navMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   const nav = document.querySelector('.top-nav');
   if (!nav) return;
   let last = window.scrollY || 0;

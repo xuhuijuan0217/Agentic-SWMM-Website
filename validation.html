@@ -12,16 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .content-section { max-width: 1000px; margin: 0 auto; padding: 2rem 0; }
-        .content-section h2 { color: var(--accent-primary); margin-top: 2rem; }
-        .content-section p { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1.05rem; }
-        .content-section img { border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin: 2rem 0; width: 100%; }
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: #fff; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        th, td { padding: 1rem; border-bottom: 1px solid var(--border-subtle); text-align: left; }
-        th { background: var(--bg-card-hover); color: var(--accent-primary); font-family: var(--font-heading); }
-        td { color: var(--text-secondary); }
-    </style>
 </head>
 
 <body>
@@ -31,7 +21,7 @@
             <a href="index.html" class="nav-brand">
                 <span class="text-gradient">Agentic SWMM</span>
             </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="vision.html" class="nav-link">Vision</a>
@@ -44,50 +34,52 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="padding-top: var(--space-xl);">
+    <main class="page-main">
         <div class="container">
-            <h1 class="text-gradient" style="text-align: center; margin-bottom: 1rem;">Validation & Audit</h1>
+            <h1 class="text-gradient page-title">Validation & Audit</h1>
             
-            <div class="content-section">
+            <div class="content-section content-section-wide">
                 <h2>Validation Snapshot</h2>
                 <p>The repository includes runnable benchmarks and research previews with different evidence boundaries.</p>
                 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Benchmark / Preview</th>
-                            <th>What it shows</th>
-                            <th>Evidence boundary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Information-loss-guided subcatchment partition</strong></td>
-                            <td>QGIS-to-Agentic SWMM preprocessing using entropy and fuzzy-similarity concepts.</td>
-                            <td>GIS preprocessing concept, not a calibrated SWMM performance claim</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Raw GeoPackage-to-INP benchmark</strong></td>
-                            <td>Public TUFLOW GeoPackage layers converted into SWMM-ready artifacts, QA, and audit</td>
-                            <td>Structured raw GIS path, not arbitrary CAD/GIS recognition</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Prepared-input SWMM benchmark</strong></td>
-                            <td>External 40-subcatchment Tecnopolo model execution, plotting, and direct <code>swmm5</code> comparison</td>
-                            <td>Prepared INP validation path</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Prior Monte Carlo uncertainty smoke</strong></td>
-                            <td>Tecnopolo HORTON parameter perturbation and hydrograph envelope preview</td>
-                            <td>Prior uncertainty smoke, not calibration</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Optional INP-derived raw adapter benchmark</strong></td>
-                            <td>Raw-like inputs extracted from a public SWMM fixture and rebuilt through the modular path</td>
-                            <td>Adapter handoff check, not greenfield watershed generation</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Benchmark / Preview</th>
+                                <th>What it shows</th>
+                                <th>Evidence boundary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Information-loss-guided subcatchment partition</strong></td>
+                                <td>QGIS-to-Agentic SWMM preprocessing using entropy and fuzzy-similarity concepts.</td>
+                                <td>GIS preprocessing concept, not a calibrated SWMM performance claim</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Raw GeoPackage-to-INP benchmark</strong></td>
+                                <td>Public TUFLOW GeoPackage layers converted into SWMM-ready artifacts, QA, and audit</td>
+                                <td>Structured raw GIS path, not arbitrary CAD/GIS recognition</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prepared-input SWMM benchmark</strong></td>
+                                <td>External 40-subcatchment Tecnopolo model execution, plotting, and direct <code>swmm5</code> comparison</td>
+                                <td>Prepared INP validation path</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prior Monte Carlo uncertainty smoke</strong></td>
+                                <td>Tecnopolo HORTON parameter perturbation and hydrograph envelope preview</td>
+                                <td>Prior uncertainty smoke, not calibration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Optional INP-derived raw adapter benchmark</strong></td>
+                                <td>Raw-like inputs extracted from a public SWMM fixture and rebuilt through the modular path</td>
+                                <td>Adapter handoff check, not greenfield watershed generation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h2>Audit and Research Memory</h2>
                 <p>The audit layer consolidates artifacts, QA checks, and metric provenance into an Obsidian-compatible experiment note. This example catches a recorded peak-flow value that does not match the value re-parsed from the SWMM report source section.</p>
@@ -122,20 +114,15 @@
                 </div>
             </div>
         </div>
-        <div class="copyright text-muted text-sm container"
-            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
-            <div style="flex: 1; text-align: center;">
+        <div class="copyright text-muted text-sm container">
+            <div class="copyright-license">Open Source (MIT License)</div>
+            <div class="copyright-text">
                 Copyright &copy; Zhonghao Zhang & Caterina Valeo 2026
             </div>
-            <div style="flex: 1;"></div>
+            <div></div>
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script src="assets/js/nav.js" defer></script>
 </body>
 </html>
