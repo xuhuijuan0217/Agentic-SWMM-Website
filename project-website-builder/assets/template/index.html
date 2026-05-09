@@ -36,7 +36,7 @@
             <a href="index.html" class="nav-brand">
                 <span class="text-gradient">{{PROJECT_SHORT_NAME}}</span>
             </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="vision.html" class="nav-link">Vision</a>
@@ -146,21 +146,15 @@
                 </div>
             </div>
         </div>
-        <div class="copyright text-muted text-sm container"
-            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
-            <div style="flex: 1; text-align: center;">
+        <div class="copyright text-muted text-sm container">
+            <div class="copyright-license">Open Source (MIT License)</div>
+            <div class="copyright-text">
                 Copyright &copy; {{AUTHORS_COPYRIGHT}}
             </div>
-            <div style="flex: 1;"></div>
+            <div></div>
         </div>
     </footer>
 
-    <script>
-        // Simple mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script src="assets/js/nav.js" defer></script>
 </body>
 </html>

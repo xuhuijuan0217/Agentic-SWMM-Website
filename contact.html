@@ -12,12 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
-        .content-section h2 { color: var(--accent-primary); margin-top: 2rem; }
-        .content-section p { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1.05rem; }
-        .code-block { background: var(--bg-card); color: var(--text-primary); padding: 1.5rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: 'Inter', sans-serif; margin: 1rem 0 2rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-    </style>
 </head>
 
 <body>
@@ -27,7 +21,7 @@
             <a href="index.html" class="nav-brand">
                 <span class="text-gradient">Agentic SWMM</span>
             </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="vision.html" class="nav-link">Vision</a>
@@ -40,9 +34,9 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="padding-top: var(--space-xl);">
+    <main class="page-main">
         <div class="container">
-            <h1 class="text-gradient" style="text-align: center; margin-bottom: 1rem;">Community & Contact</h1>
+            <h1 class="text-gradient page-title">Community & Contact</h1>
             
             <div class="content-section">
                 <h2>Where Collaborators Can Help</h2>
@@ -51,19 +45,19 @@
                 <h2>Contact</h2>
                 <p>For questions or collaboration opportunities, reach out to the authors:</p>
                 <ul>
-                    <li><strong>Zhonghao Zhang:</strong> <a href="mailto:zhonghaoz@uvic.ca" style="color: var(--accent-primary);">zhonghaoz@uvic.ca</a></li>
-                    <li><strong>Caterina Valeo:</strong> <a href="mailto:valeo@uvic.ca" style="color: var(--accent-primary);">valeo@uvic.ca</a></li>
+                    <li><strong>Zhonghao Zhang:</strong> <a href="mailto:zhonghaoz@uvic.ca" class="inline-link">zhonghaoz@uvic.ca</a></li>
+                    <li><strong>Caterina Valeo:</strong> <a href="mailto:valeo@uvic.ca" class="inline-link">valeo@uvic.ca</a></li>
                 </ul>
 
                 <h2>Citation</h2>
                 <p>If you use this workflow in your research, please cite our repository or manuscript:</p>
                 
-                <div class="code-block">
+                <div class="citation-block">
                     <strong>APA Manuscript / Preprint:</strong><br>
-                    Zhang, Z., & Valeo, C. (2026). <em>Agentic Modelling Pipeline: Reproducible Rapid Stormwater Modelling Management System with OpenClaw</em>. <a href="https://doi.org/10.31223/X5F47G" style="color: var(--accent-primary);" target="_blank">https://doi.org/10.31223/X5F47G</a>
+                    Zhang, Z., & Valeo, C. (2026). <em>Agentic Modelling Pipeline: Reproducible Rapid Stormwater Modelling Management System with OpenClaw</em>. <a href="https://doi.org/10.31223/X5F47G" class="inline-link" target="_blank">https://doi.org/10.31223/X5F47G</a>
                     <br><br>
                     <strong>APA Repository:</strong><br>
-                    Zhang, Z., & Valeo, C. (2026). <em>agentic-swmm-workflow</em> [Computer software]. GitHub. <a href="https://github.com/Zhonghao1995/agentic-swmm-workflow" style="color: var(--accent-primary);" target="_blank">https://github.com/Zhonghao1995/agentic-swmm-workflow</a>
+                    Zhang, Z., & Valeo, C. (2026). <em>agentic-swmm-workflow</em> [Computer software]. GitHub. <a href="https://github.com/Zhonghao1995/agentic-swmm-workflow" class="inline-link" target="_blank">https://github.com/Zhonghao1995/agentic-swmm-workflow</a>
                 </div>
             </div>
         </div>
@@ -92,20 +86,15 @@
                 </div>
             </div>
         </div>
-        <div class="copyright text-muted text-sm container"
-            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
-            <div style="flex: 1; text-align: center;">
+        <div class="copyright text-muted text-sm container">
+            <div class="copyright-license">Open Source (MIT License)</div>
+            <div class="copyright-text">
                 Copyright &copy; Zhonghao Zhang & Caterina Valeo 2026
             </div>
-            <div style="flex: 1;"></div>
+            <div></div>
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script src="assets/js/nav.js" defer></script>
 </body>
 </html>

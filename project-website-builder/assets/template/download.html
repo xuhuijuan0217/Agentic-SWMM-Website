@@ -12,15 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
-        .content-section h2 { color: var(--accent-primary); margin-top: 2rem; }
-        .content-section p { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1.05rem; }
-        .code-block { background: var(--text-primary); color: #e2e8f0; padding: 1rem; border-radius: var(--radius-sm); font-family: monospace; overflow-x: auto; margin: 1rem 0 2rem 0; }
-        .code-block code { font-size: 0.95rem; }
-        details { background: var(--bg-card); padding: 1rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); margin-bottom: 1rem; cursor: pointer; }
-        summary { font-weight: 600; color: var(--text-primary); font-size: 1.1rem; }
-    </style>
 </head>
 
 <body>
@@ -30,7 +21,7 @@
             <a href="index.html" class="nav-brand">
                 <span class="text-gradient">{{PROJECT_SHORT_NAME}}</span>
             </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="vision.html" class="nav-link">Vision</a>
@@ -43,14 +34,14 @@
     </nav>
 
     <!-- Main Content -->
-    <main style="padding-top: var(--space-xl);">
+    <main class="page-main">
         <div class="container">
-            <h1 class="text-gradient" style="text-align: center; margin-bottom: 1rem;">Download & Installation</h1>
+            <h1 class="text-gradient page-title">Download & Installation</h1>
             
             <div class="content-section">
                 
-                <div style="text-align: center; margin: 2rem 0;">
-                    <a href="{{GITHUB_URL}}/releases/latest" target="_blank" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Download Latest Release</a>
+                <div class="download-cta">
+                    <a href="{{GITHUB_URL}}/releases/latest" target="_blank" class="btn btn-primary">Download Latest Release</a>
                 </div>
 
                 <h2>Try it with Docker (Recommended)</h2>
@@ -114,20 +105,15 @@
                 </div>
             </div>
         </div>
-        <div class="copyright text-muted text-sm container"
-            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
-            <div style="flex: 1; text-align: center;">
+        <div class="copyright text-muted text-sm container">
+            <div class="copyright-license">Open Source (MIT License)</div>
+            <div class="copyright-text">
                 Copyright &copy; {{AUTHORS_COPYRIGHT}}
             </div>
-            <div style="flex: 1;"></div>
+            <div></div>
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script src="assets/js/nav.js" defer></script>
 </body>
 </html>
