@@ -25,7 +25,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=denser-homepage">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container hero-grid">
+            <div class="container hero-layout">
                 <div class="hero-content">
                     <span class="hero-tagline">Codex / OpenClaw / Hermes Ready</span>
                     <h1 class="text-gradient">Reproducible Stormwater Modeling</h1>
@@ -66,36 +66,51 @@
                         <a href="{{PAPER_URL}}" target="_blank" class="btn btn-outline">Read the Paper</a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <img src="{{LOGO_URL}}" alt="{{PROJECT_SHORT_NAME}} Logo">
+                <aside class="hero-panel" aria-label="{{PROJECT_SHORT_NAME}} highlights">
+                    <div class="hero-visual">
+                        <img src="{{LOGO_URL}}" alt="{{PROJECT_SHORT_NAME}} Logo">
+                    </div>
+                    <div class="workflow-list">
+                        <div class="workflow-item">
+                            <span class="workflow-kicker">Execute</span>
+                            <strong>Run SWMM deterministically</strong>
+                            <p>Docker and local scripts keep model execution repeatable across machines.</p>
+                        </div>
+                        <div class="workflow-item">
+                            <span class="workflow-kicker">Verify</span>
+                            <strong>Check outputs before claims</strong>
+                            <p>QA summaries, provenance files, and comparisons make evidence traceable.</p>
+                        </div>
+                        <div class="workflow-item">
+                            <span class="workflow-kicker">Remember</span>
+                            <strong>Build modeling memory</strong>
+                            <p>Audited runs can become Obsidian-ready notes and skill-refinement proposals.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">SWMM</span>
-                    <span class="stat-label">EPA 5.2 Integration</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Agent</span>
-                    <span class="stat-label">Codex / OpenClaw Ready</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Audit</span>
-                    <span class="stat-label">Obsidian-compatible</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">MIT</span>
-                    <span class="stat-label">Open Source License</span>
+                <div class="stats-grid compact-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">SWMM</span>
+                        <span class="stat-label">EPA 5.2 Integration</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Agent</span>
+                        <span class="stat-label">Codex / OpenClaw Ready</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Audit</span>
+                        <span class="stat-label">Obsidian-compatible</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">MIT</span>
+                        <span class="stat-label">Open Source License</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Actions -->
-        <section class="section container">
+        <section class="section section-tight container">
             <h2>Explore the Project</h2>
             <div class="card-grid">
                 <a href="features.html" class="card">
