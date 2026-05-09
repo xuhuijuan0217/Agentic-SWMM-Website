@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>Community & Contact | Agentic SWMM Workflow</title>
+    <meta name="description"
+        content="Contact information, citation, and community collaboration for Agentic SWMM." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
+        .content-section h2 { color: var(--accent-primary); margin-top: 2rem; }
+        .content-section p { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1.05rem; }
+        .code-block { background: var(--bg-card); color: var(--text-primary); padding: 1.5rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: 'Inter', sans-serif; margin: 1rem 0 2rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="text-gradient">Agentic SWMM</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="vision.html" class="nav-link">Vision</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="validation.html" class="nav-link">Validation</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: var(--space-xl);">
+        <div class="container">
+            <h1 class="text-gradient" style="text-align: center; margin-bottom: 1rem;">Community & Contact</h1>
+            
+            <div class="content-section">
+                <h2>Where Collaborators Can Help</h2>
+                <p>Contributions are welcome in additional SWMM case studies, stronger calibration and validation workflows, DEM / land-use / soil / drainage-asset workflows, new MCP tools, QA testing, tutorials, and interoperability with GIS, ML, and hydrologic toolchains.</p>
+
+                <h2>Contact</h2>
+                <p>For questions or collaboration opportunities, reach out to the authors:</p>
+                <ul>
+                    <li><strong>Zhonghao Zhang:</strong> <a href="mailto:zhonghaoz@uvic.ca" style="color: var(--accent-primary);">zhonghaoz@uvic.ca</a></li>
+                    <li><strong>Caterina Valeo:</strong> <a href="mailto:valeo@uvic.ca" style="color: var(--accent-primary);">valeo@uvic.ca</a></li>
+                </ul>
+
+                <h2>Citation</h2>
+                <p>If you use this workflow in your research, please cite our repository or manuscript:</p>
+                
+                <div class="code-block">
+                    <strong>APA Manuscript / Preprint:</strong><br>
+                    Zhang, Z., & Valeo, C. (2026). <em>Agentic Modelling Pipeline: Reproducible Rapid Stormwater Modelling Management System with OpenClaw</em>. <a href="https://doi.org/10.31223/X5F47G" style="color: var(--accent-primary);" target="_blank">https://doi.org/10.31223/X5F47G</a>
+                    <br><br>
+                    <strong>APA Repository:</strong><br>
+                    Zhang, Z., & Valeo, C. (2026). <em>agentic-swmm-workflow</em> [Computer software]. GitHub. <a href="https://github.com/Zhonghao1995/agentic-swmm-workflow" style="color: var(--accent-primary);" target="_blank">https://github.com/Zhonghao1995/agentic-swmm-workflow</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>Agentic SWMM</h2>
+                <p class="text-muted">A verification-first framework for reproducible stormwater modeling.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="vision.html">Vision</a>
+                    <a href="features.html">Features</a>
+                    <a href="validation.html">Validation</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <a href="https://github.com/Zhonghao1995/agentic-swmm-workflow" target="_blank">GitHub</a>
+                    <a href="https://github.com/Zhonghao1995/agentic-swmm-workflow/releases/latest" target="_blank">Releases</a>
+                    <a href="https://doi.org/10.31223/X5F47G" target="_blank">Paper (EarthArXiv)</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-muted text-sm container"
+            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
+            <div style="flex: 1; text-align: center;">
+                Copyright &copy; Zhonghao Zhang & Caterina Valeo 2026
+            </div>
+            <div style="flex: 1;"></div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

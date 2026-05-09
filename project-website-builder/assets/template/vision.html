@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>Vision & Pain Points | {{PROJECT_NAME}}</title>
+    <meta name="description"
+        content="The vision behind {{PROJECT_SHORT_NAME}}: Moving from simply running models to a memory-informed, auditable, and reproducible stormwater modeling workflow." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
+        .content-section h2 { color: var(--accent-primary); margin-top: 2rem; }
+        .content-section p { margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; }
+        .highlight-box { background: var(--bg-card); padding: 2rem; border-left: 4px solid var(--accent-primary); border-radius: var(--radius-md); margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .highlight-box p { margin-bottom: 0; color: var(--text-primary); font-weight: 500; font-style: italic; }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="text-gradient">{{PROJECT_SHORT_NAME}}</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="vision.html" class="nav-link active">Vision</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="validation.html" class="nav-link">Validation</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: var(--space-xl);">
+        <div class="container">
+            <h1 class="text-gradient" style="text-align: center; margin-bottom: 1rem;">Vision & Core Pain Points</h1>
+            
+            <div class="content-section">
+                <h2>The Initial Goal vs. The Real Problem</h2>
+                <p>When I first started this project, the goal was simple: make EPA SWMM easier to install, run, reproduce, and check through an agentic workflow.</p>
+                <p>But as I kept developing it, I realized that real hydrological modelling is not only about running a model. A modelling workflow should also <strong>remember what was done, what assumptions were made, what failed, what was corrected, and whether the results can be trusted</strong>.</p>
+                
+                <div class="highlight-box">
+                    <p>"To me, this is an important step from 'AI runs a SWMM model' toward 'AI helps build a reproducible, inspectable, and memory-informed modelling workflow.'"</p>
+                </div>
+
+                <h2>The Three-Part Solution</h2>
+                <p>That is why the current version of {{PROJECT_NAME}} now includes three connected parts:</p>
+                <ol style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; padding-left: 2rem;">
+                    <li><strong>Reproducible SWMM Execution:</strong> Run SWMM in a deterministic and inspectable way, generate run artifacts, and perform QA-oriented checks.</li>
+                    <li><strong>Audit-Based Modelling Memory:</strong> Record provenance and produce Obsidian-compatible experiment notes to summarize repeated assumptions, QA issues, missing evidence, failure patterns, run-to-run differences, and useful modelling lessons.</li>
+                    <li><strong>Controlled Skill Refinement:</strong> The memory layer uses these records to propose refinements to existing workflow skills.</li>
+                </ol>
+
+                <h2>Human Review & Safe AI</h2>
+                <p>A key point is that this is <strong>not autonomous self-editing</strong>. While the memory layer can propose refinements to existing workflow skills, accepted changes still require human review and benchmark verification. This ensures that it is completely safe to use AI in real, professional projects.</p>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="{{PAPER_URL}}" target="_blank" class="btn btn-primary" style="margin-right: 1rem;">Read the Preprint</a>
+                    <a href="{{GITHUB_URL}}" target="_blank" class="btn btn-outline">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>{{PROJECT_SHORT_NAME}}</h2>
+                <p class="text-muted">{{FOOTER_DESCRIPTION}}</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="vision.html">Vision</a>
+                    <a href="features.html">Features</a>
+                    <a href="validation.html">Validation</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <a href="{{GITHUB_URL}}" target="_blank">GitHub</a>
+                    <a href="{{GITHUB_URL}}/releases/latest" target="_blank">Releases</a>
+                    <a href="{{PAPER_URL}}" target="_blank">Paper (EarthArXiv)</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-muted text-sm container"
+            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
+            <div style="flex: 1; text-align: center;">
+                Copyright &copy; {{AUTHORS_COPYRIGHT}}
+            </div>
+            <div style="flex: 1;"></div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

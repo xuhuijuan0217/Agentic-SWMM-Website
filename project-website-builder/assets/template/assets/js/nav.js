@@ -1,0 +1,33 @@
+(function(){
+  const nav = document.querySelector('.top-nav');
+  if (!nav) return;
+  let last = window.scrollY || 0;
+  let idleTimer = null;
+  let hovering = false;
+
+  function show(){ nav.classList.remove('is-hidden'); }
+  function hide(){
+    if (hovering) return;
+    if ((window.scrollY || 0) <= 10) return;
+    nav.classList.add('is-hidden');
+  }
+  function scheduleAutoHide(){ if (idleTimer) clearTimeout(idleTimer); idleTimer = setTimeout(hide, 3000); }
+  function onScroll(){
+    const y = window.scrollY || 0;
+    if (y < 10) { show(); return; }
+    if (y < last) { show(); } else if (y > last && y > 120) { hide(); }
+    last = y;
+    scheduleAutoHide();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('pointermove', function(e){ if (e.clientY <= 80) show(); scheduleAutoHide(); });
+
+  nav.addEventListener('mouseenter', function(){ hovering = true; show(); if (idleTimer) clearTimeout(idleTimer); });
+  nav.addEventListener('mouseleave', function(){ hovering = false; scheduleAutoHide(); });
+  nav.addEventListener('focusin', function(){ hovering = true; show(); if (idleTimer) clearTimeout(idleTimer); });
+  nav.addEventListener('focusout', function(){ hovering = false; scheduleAutoHide(); });
+
+  // initial
+  scheduleAutoHide();
+})();

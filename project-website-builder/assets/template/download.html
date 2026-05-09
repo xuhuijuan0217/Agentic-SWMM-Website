@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>Download | {{PROJECT_NAME}}</title>
+    <meta name="description"
+        content="Download and quickly start with {{PROJECT_SHORT_NAME}} using Docker or local bootstrap scripts." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
+        .content-section h2 { color: var(--accent-primary); margin-top: 2rem; }
+        .content-section p { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1.05rem; }
+        .code-block { background: var(--text-primary); color: #e2e8f0; padding: 1rem; border-radius: var(--radius-sm); font-family: monospace; overflow-x: auto; margin: 1rem 0 2rem 0; }
+        .code-block code { font-size: 0.95rem; }
+        details { background: var(--bg-card); padding: 1rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); margin-bottom: 1rem; cursor: pointer; }
+        summary { font-weight: 600; color: var(--text-primary); font-size: 1.1rem; }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="text-gradient">{{PROJECT_SHORT_NAME}}</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="vision.html" class="nav-link">Vision</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="validation.html" class="nav-link">Validation</a>
+                <a href="download.html" class="nav-link active">Download</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding-top: var(--space-xl);">
+        <div class="container">
+            <h1 class="text-gradient" style="text-align: center; margin-bottom: 1rem;">Download & Installation</h1>
+            
+            <div class="content-section">
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="{{GITHUB_URL}}/releases/latest" target="_blank" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Download Latest Release</a>
+                </div>
+
+                <h2>Try it with Docker (Recommended)</h2>
+                <p>For the most reproducible setup across machines, install Docker Desktop or Docker Engine, then run the following command to execute the acceptance benchmarks:</p>
+                
+                <div class="code-block">
+                    <code>mkdir -p agentic-swmm-runs<br>docker run --rm -v "$PWD/agentic-swmm-runs:/app/runs" ghcr.io/zhonghao1995/agentic-swmm-workflow:v0.3.0 acceptance</code>
+                </div>
+                <p>Artifacts are written to <code>agentic-swmm-runs</code>.</p>
+
+                <h2>One Command Options</h2>
+                <p>The repository also includes one-command setup scripts for local installs. Review the script first, then run it if you are comfortable with what it does.</p>
+                
+                <details>
+                    <summary>macOS / Linux local install</summary>
+                    <div class="code-block">
+                        <code>bash -c "$(curl -fsSL https://raw.githubusercontent.com/Zhonghao1995/agentic-swmm-workflow/main/scripts/bootstrap.sh)"</code>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>Windows PowerShell local install</summary>
+                    <p>Run PowerShell as Administrator:</p>
+                    <div class="code-block">
+                        <code>powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Zhonghao1995/agentic-swmm-workflow/main/scripts/bootstrap.ps1'))"</code>
+                    </div>
+                </details>
+
+                <h2>Codex / OpenClaw / Hermes Ready</h2>
+                <p>Codex can serve as the primary local development runtime for this repository: it can inspect the checkout, run scripts, edit skills, generate audit records, update the local Obsidian vault, and review evidence before claims are accepted.</p>
+                <p>OpenClaw and Hermes remain compatible orchestration targets, especially for MCP-centered agent runs outside the Codex development environment.</p>
+                <p>For agent-orchestrated runs, preload the Agentic AI memory package and then use the top-level end-to-end skill:</p>
+                
+                <div class="code-block">
+                    <code>agentic-ai/memory/<br>skills/swmm-end-to-end/SKILL.md</code>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>{{PROJECT_SHORT_NAME}}</h2>
+                <p class="text-muted">{{FOOTER_DESCRIPTION}}</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="vision.html">Vision</a>
+                    <a href="features.html">Features</a>
+                    <a href="validation.html">Validation</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <a href="{{GITHUB_URL}}" target="_blank">GitHub</a>
+                    <a href="{{GITHUB_URL}}/releases/latest" target="_blank">Releases</a>
+                    <a href="{{PAPER_URL}}" target="_blank">Paper (EarthArXiv)</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-muted text-sm container"
+            style="margin-top: 2rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div style="font-style: italic; flex: 1; text-align: left;">Open Source (MIT License)</div>
+            <div style="flex: 1; text-align: center;">
+                Copyright &copy; {{AUTHORS_COPYRIGHT}}
+            </div>
+            <div style="flex: 1;"></div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
