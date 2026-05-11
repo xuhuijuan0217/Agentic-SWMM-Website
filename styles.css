@@ -363,24 +363,11 @@ code {
     margin: 1rem 0 2rem;
 }
 
-.installer-panel label,
 .installer-command h3 {
     display: block;
     color: var(--text-primary);
     font-weight: 700;
     margin-bottom: 0.5rem;
-}
-
-.installer-select {
-    width: 100%;
-    min-height: 44px;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    background: #fff;
-    color: var(--text-primary);
-    font: inherit;
-    padding: 0.65rem 0.75rem;
-    margin-bottom: 1rem;
 }
 
 .installer-command {

@@ -15,7 +15,21 @@ if ([string]::IsNullOrWhiteSpace($Ref)) {
     $Ref = 'main'
 }
 if ([string]::IsNullOrWhiteSpace($Model)) {
-    $Model = 'gpt-5.5'
+    Write-Host ""
+    Write-Host "Choose the OpenAI model for Agentic SWMM:"
+    Write-Host "  1) gpt-5.5  strongest default"
+    Write-Host "  2) gpt-5.4  balanced cost/performance"
+    Write-Host "  3) gpt-5.2  older compatible frontier model"
+    Write-Host ""
+    $choice = Read-Host "Select model [1]"
+    switch ($choice) {
+        "2" { $Model = "gpt-5.4" }
+        "3" { $Model = "gpt-5.2" }
+        "gpt-5.4" { $Model = "gpt-5.4" }
+        "gpt-5.2" { $Model = "gpt-5.2" }
+        "gpt-5.5" { $Model = "gpt-5.5" }
+        default { $Model = "gpt-5.5" }
+    }
 }
 
 $repo = 'Zhonghao1995/agentic-swmm-workflow'

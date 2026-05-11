@@ -16,40 +16,6 @@
     });
   }
 
-  const modelSelect = document.querySelector('[data-model-select]');
-  if (modelSelect) {
-    const commandTargets = {
-      unix: document.querySelector('[data-command="unix"]'),
-      windows: document.querySelector('[data-command="windows"]'),
-      pip: document.querySelector('[data-command="pip"]')
-    };
-
-    function setCommand(target, lines) {
-      if (!target) return;
-      target.innerHTML = lines.map(function(line){
-        return line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      }).join('<br>');
-    }
-
-    function updateInstallerCommands() {
-      const model = modelSelect.value || 'gpt-5.5';
-      setCommand(commandTargets.unix, [
-        'curl -fsSL https://aiswmm.com/install.sh | AISWMM_MODEL=' + model + ' bash'
-      ]);
-      setCommand(commandTargets.windows, [
-        '$env:AISWMM_MODEL = "' + model + '"',
-        'irm https://aiswmm.com/install.ps1 | iex'
-      ]);
-      setCommand(commandTargets.pip, [
-        'pip install aiswmm',
-        'aiswmm setup --provider openai --model ' + model
-      ]);
-    }
-
-    modelSelect.addEventListener('change', updateInstallerCommands);
-    updateInstallerCommands();
-  }
-
   const nav = document.querySelector('.top-nav');
   if (!nav) return;
   let last = window.scrollY || 0;

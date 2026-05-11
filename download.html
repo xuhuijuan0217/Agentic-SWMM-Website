@@ -52,35 +52,28 @@
                 </div>
                 <p>Artifacts are written to <code>agentic-swmm-runs</code>.</p>
 
-                <h2>One Command Options</h2>
-                <p>Select a model, then use the generated command for your platform. The installer registers Agentic SWMM skills, MCP servers, memory layers, and the selected OpenAI model during setup.</p>
+                <h2>One Command Installer</h2>
+                <p>Use one command to start the local runtime installer. During installation, the script asks which OpenAI model to register for Agentic SWMM.</p>
 
                 <div class="installer-panel" data-installer>
-                    <label for="model-select">OpenAI model</label>
-                    <select id="model-select" class="installer-select" data-model-select>
-                        <option value="gpt-5.5" selected>gpt-5.5 - strongest default</option>
-                        <option value="gpt-5.4">gpt-5.4 - balanced cost/performance</option>
-                        <option value="gpt-5.2">gpt-5.2 - older compatible frontier model</option>
-                    </select>
-
                     <div class="installer-command">
                         <h3>macOS / Linux full runtime installer</h3>
                         <div class="code-block">
-                            <code data-command="unix">curl -fsSL https://aiswmm.com/install.sh | AISWMM_MODEL=gpt-5.5 bash</code>
+                            <code>curl -fsSL https://aiswmm.com/install.sh | bash</code>
                         </div>
                     </div>
 
                     <div class="installer-command">
                         <h3>Windows PowerShell full runtime installer</h3>
                         <div class="code-block">
-                            <code data-command="windows">$env:AISWMM_MODEL = "gpt-5.5"<br>irm https://aiswmm.com/install.ps1 | iex</code>
+                            <code>irm https://aiswmm.com/install.ps1 | iex</code>
                         </div>
                     </div>
 
                     <div class="installer-command">
                         <h3>Python package setup</h3>
                         <div class="code-block">
-                            <code data-command="pip">pip install aiswmm<br>aiswmm setup --provider openai --model gpt-5.5</code>
+                            <code>pip install aiswmm<br>aiswmm setup --provider openai --model gpt-5.5</code>
                         </div>
                     </div>
                 </div>
