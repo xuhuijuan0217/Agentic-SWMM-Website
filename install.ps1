@@ -5,7 +5,9 @@ param(
     [switch]$SkipSwmm,
     [switch]$SkipMcp,
     [switch]$SkipSetup,
-    [switch]$InstallSystemDeps
+    [switch]$InstallSystemDeps,
+    [string]$SwmmExe,
+    [string]$SwmmVersion = "5.2.4"
 )
 
 $ErrorActionPreference = 'Stop'
@@ -49,5 +51,7 @@ if ($SkipSwmm) { $args.SkipSwmm = $true }
 if ($SkipMcp) { $args.SkipMcp = $true }
 if ($SkipSetup) { $args.SkipSetup = $true }
 if ($InstallSystemDeps) { $args.InstallSystemDeps = $true }
+if ($SwmmExe) { $args.SwmmExe = $SwmmExe }
+if ($SwmmVersion) { $args.SwmmVersion = $SwmmVersion }
 
 & $block @args
