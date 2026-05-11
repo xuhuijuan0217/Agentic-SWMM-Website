@@ -43,6 +43,7 @@ $block = [scriptblock]::Create($script)
 $args = @{
     Provider = $Provider
     Model = $Model
+    SourceRef = $Ref
 }
 if ($SkipSwmm) { $args.SkipSwmm = $true }
 if ($SkipMcp) { $args.SkipMcp = $true }
