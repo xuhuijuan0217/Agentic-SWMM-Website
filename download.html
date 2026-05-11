@@ -53,20 +53,49 @@
                 <p>Artifacts are written to <code>agentic-swmm-runs</code>.</p>
 
                 <h2>One Command Options</h2>
-                <p>The repository also includes one-command setup scripts for local installs. Review the script first, then run it if you are comfortable with what it does.</p>
+                <p>Select a model, then use the generated command for your platform. The installer registers Agentic SWMM skills, MCP servers, memory layers, and the selected OpenAI model during setup.</p>
+
+                <div class="installer-panel" data-installer>
+                    <label for="model-select">OpenAI model</label>
+                    <select id="model-select" class="installer-select" data-model-select>
+                        <option value="gpt-5.5" selected>gpt-5.5 - strongest default</option>
+                        <option value="gpt-5.4">gpt-5.4 - balanced cost/performance</option>
+                        <option value="gpt-5.2">gpt-5.2 - older compatible frontier model</option>
+                    </select>
+
+                    <div class="installer-command">
+                        <h3>macOS / Linux full runtime installer</h3>
+                        <div class="code-block">
+                            <code data-command="unix">curl -fsSL https://aiswmm.com/install.sh | AISWMM_MODEL=gpt-5.5 bash</code>
+                        </div>
+                    </div>
+
+                    <div class="installer-command">
+                        <h3>Windows PowerShell full runtime installer</h3>
+                        <div class="code-block">
+                            <code data-command="windows">$env:AISWMM_MODEL = "gpt-5.5"<br>irm https://aiswmm.com/install.ps1 | iex</code>
+                        </div>
+                    </div>
+
+                    <div class="installer-command">
+                        <h3>Python package setup</h3>
+                        <div class="code-block">
+                            <code data-command="pip">pip install aiswmm<br>aiswmm setup --provider openai --model gpt-5.5</code>
+                        </div>
+                    </div>
+                </div>
                 
                 <details>
-                    <summary>macOS / Linux local install</summary>
+                    <summary>Review macOS / Linux installer script</summary>
                     <div class="code-block">
-                        <code>bash -c "$(curl -fsSL https://raw.githubusercontent.com/Zhonghao1995/agentic-swmm-workflow/main/scripts/bootstrap.sh)"</code>
+                        <code>curl -fsSL https://aiswmm.com/install.sh</code>
                     </div>
                 </details>
                 
                 <details>
-                    <summary>Windows PowerShell local install</summary>
-                    <p>Run PowerShell as Administrator:</p>
+                    <summary>Review Windows PowerShell installer script</summary>
                     <div class="code-block">
-                        <code>powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Zhonghao1995/agentic-swmm-workflow/main/scripts/bootstrap.ps1'))"</code>
+                        <code>irm https://aiswmm.com/install.ps1</code>
                     </div>
                 </details>
 
